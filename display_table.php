@@ -19,9 +19,9 @@
 
    <?php
         $servername = "localhost";
-        $username = "ias2020";
-        $password = "ecell123";
-        $dbname = "iasdb";
+        $username = "piyush";
+        $password = "#Raunak@1998";
+        $dbname = "soft_lab_ass1";
 
         $conn = mysqli_connect($servername, $username, $password, $dbname);
         

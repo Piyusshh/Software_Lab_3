@@ -9,9 +9,9 @@ require_once('mailing.php');
 if(isset($_POST['submit_row']))
 {
  $servername = "localhost";
- $username = "ias2020";
- $password = "ecell123";
- $dbname = "iasdb";
+ $username = "piyush";
+ $password = "#Raunak@1998";
+ $dbname = "soft_lab_ass1";
 
 
 $conn = new mysqli($servername, $username, $password, $dbname);
