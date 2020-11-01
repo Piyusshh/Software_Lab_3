@@ -40,7 +40,7 @@ if ($conn->connect_error){
    $sql = "INSERT INTO employee_table (name, age, job, startidea, startdesc, leaderid, leaderrollno) VALUES ('$name[$i]', '$age[$i]', '$job[$i]','$startidea', '$startdesc', '$leaderid', '$leaderrollno' )";
    if ($conn->query($sql) === TRUE) {
      $s = "Welcome to C-Suites";
-     $sent = htmlMail($job[0],$s,$name[0],'', '');
+     $sent = 1; //htmlMail($job[0],$s,$name[0],'', '');
      if($sent){
        header('LOCATION:thanks.php');
      }else {
