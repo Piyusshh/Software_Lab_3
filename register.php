@@ -69,13 +69,13 @@ else{
                 <div class="form-group row">
                     <label for="age[]" class="col-md-4 col-form-label">Leader Phone Number</label>
                     <div class="col-md-8">
-                        <input type="number" class="form-control rounded-pill" name="age[]" placeholder="Leader Phone Number" required>
+                        <input type="number" class="form-control rounded-pill" name="contact_number[]" placeholder="Leader Phone Number" required>
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="job[]" class="col-md-4 col-form-label">Leader Email</label>
                     <div class="col-md-8">
-                        <input type="email" class="form-control rounded-pill" name="job[]" placeholder="Leader Email" required>
+                        <input type="email" class="form-control rounded-pill" name="email[]" placeholder="Leader Email" required>
                     </div>
                 </div>
                 <?php
@@ -85,10 +85,16 @@ else{
                     <div class="form-group row">
                         <p style="color: white;"><?php echo "Team member " . $i; ?></p>
                         <input class="form-control rounded-pill" type="text" name="name[]" placeholder="Enter Name" required>
-                        <input class="form-control rounded-pill mt-2" type="number" name="age[]" placeholder="Enter Phone Number" required>
-                        <input class="form-control rounded-pill mt-2" type="email" name="job[]" placeholder="Enter Email" required>
+                        <input class="form-control rounded-pill mt-2" type="number" name="contact_number[]" placeholder="Enter Phone Number" required>
+                        <input class="form-control rounded-pill mt-2" type="email" name="email[]" placeholder="Enter Email" required>
                     </div>
                 <?php endfor; ?>
+                <div class="form-group row">
+                    <label for="job[]" class="col-md-4 col-form-label">Choose Password</label>
+                    <div class="col-md-8">
+                        <input type="password" class="form-control rounded-pill" name="password" placeholder="Choose Password">
+                    </div>
+                </div>
                 <center>
                 <button class="btn btn-danger rounded-pill align-items-center" type="submit" name="submit_row" value="SUBMIT">SUBMIT</button>
                 </center>

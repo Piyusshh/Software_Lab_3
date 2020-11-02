@@ -20,8 +20,8 @@ if ($conn->connect_error){
 }
 
  $name=$_POST['name'];
- $age=$_POST['age'];
- $job=$_POST['job'];
+ $contact_number=$_POST['contact_number'];
+ $email=$_POST['email'];
  $startidea = $_POST['startidea'];
  $startdesc = $_POST['startdesc'];
  $leaderid = $_POST['leaderid'];
@@ -31,13 +31,13 @@ if ($conn->connect_error){
 
  for($i=0;$i<count($name);$i++)
  {
-  if($name[$i]!="" && $age[$i]!="" && $job[$i]!="")
+  if($name[$i]!="" && $contact_number[$i]!="" && $email[$i]!="")
   {
     // echo $name[$i];
     // echo $age[$i];
     // echo $job[$i];
-    $_SESSION['leader_email'] = $job[0];
-   $sql = "INSERT INTO employee_table (name, age, job, startidea, startdesc, leaderid, leaderrollno) VALUES ('$name[$i]', '$age[$i]', '$job[$i]','$startidea', '$startdesc', '$leaderid', '$leaderrollno' )";
+    $_SESSION['leader_email'] = $email[0];
+   $sql = "INSERT INTO employee_table (name, contact_number, email, startidea, startdesc, leaderid, leaderrollno) VALUES ('$name[$i]', '$contact_number[$i]', '$email[$i]','$startidea', '$startdesc', '$leaderid', '$leaderrollno' )";
    if ($conn->query($sql) === TRUE) {
      $s = "Welcome to C-Suites";
      $sent = 1; //htmlMail($job[0],$s,$name[0],'', '');

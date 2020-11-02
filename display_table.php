@@ -29,7 +29,7 @@
             die("Connection failed: " . mysqli_connect_error());
         }
 
-        $sql = "SELECT id, name, age, job, startidea, startdesc, leaderid, leaderrollno FROM employee_table";
+        $sql = "SELECT id, name, contact_number, email, startidea, startdesc, leaderid, leaderrollno FROM employee_table";
         $result = mysqli_query($conn, $sql);
         
     ?>
@@ -54,8 +54,8 @@
             <tr>
                 <td><?php echo $row["id"]; ?></td>
                 <td><?php echo $row["name"]; ?></td>
-                <td><?php echo $row["age"]; ?></td>
-                <td><?php echo $row["job"]; ?></td>
+                <td><?php echo $row["contact_number"]; ?></td>
+                <td><?php echo $row["email"]; ?></td>
                 <td><?php echo $row["startidea"]; ?></td>
                 <td><?php echo $row["startdesc"]; ?></td>
                 <td><?php echo $row["leaderid"]; ?></td>
